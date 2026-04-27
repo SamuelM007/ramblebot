@@ -39,7 +39,7 @@ public class LowercaseSentenceTokenizer implements Tokenizer {
 
     while (scanner.hasNext() == true) {
 
-      String[] sentence = scanner.nextLine().split(" ");
+      String[] sentence = scanner.nextLine().toLowerCase().split(" ");
       for (String word : sentence) {
 
         char lastChar = word.charAt(word.length() - 1);
