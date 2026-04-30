@@ -41,13 +41,12 @@ public class LowercaseSentenceTokenizer implements Tokenizer {
 
       String[] sentence = scanner.nextLine().toLowerCase().split(" ");
       for (String word : sentence) {
-
-        char lastChar = word.charAt(word.length() - 1);
-        if (lastChar == '.') {
+        
+        if (word.endsWith(".")) {
 
           list.add(word.substring(0, word.length() - 1));
 
-          list.add("" + lastChar);
+          list.add(".");
 
         } else {
           list.add(word);
